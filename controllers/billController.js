@@ -1,8 +1,8 @@
-import Bill from '../models/Bill';
-import GraniteWork from '../models/GraniteWork';
-import TilesWork from '../models/TilesWork';
+import Bill from '../models/Bill.js';
+import GraniteWork from '../models/GraniteWork.js';
+import TilesWork from '../models/TilesWork.js';
 
-const listAllBills = async () => {
+const listAllBills = async (req, res) => {
   const bills = await Bill.find();
   res.json({
     success: true,
@@ -10,7 +10,8 @@ const listAllBills = async () => {
     data: bills,
   });
 };
-const newBillGenerator = async () => {
+const newBillGenerator = async (req, res) => {
+  console.log(req.body);
   const {
     graniteFlooringUnit,
     graniteFlooringPrevQuan,
@@ -29,32 +30,34 @@ const newBillGenerator = async () => {
     floorTilesPrevQuan,
     floorTilesCurrQuan,
 
-    tableTopNumberOneUnit,
-    tableTopNumberOnePrevQuan,
-    tableTopNumberOneCurrQuan,
+    tableTopNoOneUnit,
+    tableTopNoOnePrevQuan,
+    tableTopNoOneCurrQuan,
 
-    tableTopNumberTwoUnit,
-    tableTopNumberTwoPrevQuan,
-    tableTopNumberTwoCurrQuan,
+    tableTopNoTwoUnit,
+    tableTopNoTwoPrevQuan,
+    tableTopNoTwoCurrQuan,
 
-    tableTopNumberThreeUnit,
-    tableTopNumberThreePrevQuan,
-    tableTopNumberThreeCurrQuan,
+    tableTopNoThreeUnit,
+    tableTopNoThreePrevQuan,
+    tableTopNoThreeCurrQuan,
 
-    tableTopNumberFourUnit,
-    tableTopNumberFourPrevQuan,
-    tableTopNumberFourCurrQuan,
+    tableTopNoFourUnit,
+    tableTopNoFourPrevQuan,
+    tableTopNoFourCurrQuan,
 
-    verticalTableTopNumberOneUnit,
-    verticalTableTopNumberOnePrevQuan,
-    verticalTableTopNumberOneCurrQuan,
+    verticalTableTopNoOneUnit,
+    verticalTableTopNoOnePrevQuan,
+    verticalTableTopNoOneCurrQuan,
 
-    verticalTableTopNumberTwoUnit,
-    verticalTableTopNumberTwoPrevQuan,
-    verticalTableTopNumberTwoCurrQuan,
+    verticalTableTopNoTwoUnit,
+    verticalTableTopNoTwoPrevQuan,
+    verticalTableTopNoTwoCurrQuan,
 
     totalAdvance,
   } = req.body;
+
+  console.log(typeof totalAdvance);
 
   // Granite work
   const granite = new GraniteWork({
@@ -119,29 +122,29 @@ const newBillGenerator = async () => {
     floorTilesPrevQuan,
     floorTilesCurrQuan,
 
-    tableTopNumberOneUnit,
-    tableTopNumberOnePrevQuan,
-    tableTopNumberOneCurrQuan,
+    tableTopNoOneUnit,
+    tableTopNoOnePrevQuan,
+    tableTopNoOneCurrQuan,
 
-    tableTopNumberTwoUnit,
-    tableTopNumberTwoPrevQuan,
-    tableTopNumberTwoCurrQuan,
+    tableTopNoTwoUnit,
+    tableTopNoTwoPrevQuan,
+    tableTopNoTwoCurrQuan,
 
-    tableTopNumberThreeUnit,
-    tableTopNumberThreePrevQuan,
-    tableTopNumberThreeCurrQuan,
+    tableTopNoThreeUnit,
+    tableTopNoThreePrevQuan,
+    tableTopNoThreeCurrQuan,
 
-    tableTopNumberFourUnit,
-    tableTopNumberFourPrevQuan,
-    tableTopNumberFourCurrQuan,
+    tableTopNoFourUnit,
+    tableTopNoFourPrevQuan,
+    tableTopNoFourCurrQuan,
 
-    verticalTableTopNumberOneUnit,
-    verticalTableTopNumberOnePrevQuan,
-    verticalTableTopNumberOneCurrQuan,
+    verticalTableTopNoOneUnit,
+    verticalTableTopNoOnePrevQuan,
+    verticalTableTopNoOneCurrQuan,
 
-    verticalTableTopNumberTwoUnit,
-    verticalTableTopNumberTwoPrevQuan,
-    verticalTableTopNumberTwoCurrQuan,
+    verticalTableTopNoTwoUnit,
+    verticalTableTopNoTwoPrevQuan,
+    verticalTableTopNoTwoCurrQuan,
   });
 
   tile.wallTilesCumQuan = tile.wallTilesPrevQuan + tile.wallTilesCurrQuan;
@@ -159,8 +162,7 @@ const newBillGenerator = async () => {
 
   tile.floorTilesCurrPrice = tile.floorTilesRate * tile.floorTilesCurrQuan;
 
-  tile.floorTilesCumPrice =
-    tile.floorTilesPrevPrice + granite.floorTilesCurrPrice;
+  tile.floorTilesCumPrice = tile.floorTilesPrevPrice + tile.floorTilesCurrPrice;
 
   // table tops
   tile.tableTopNoOneCumQuan =
@@ -279,11 +281,20 @@ const newBillGenerator = async () => {
   bill.totalCumBalance = bill.totalCumAmount - totalAdvance;
 
   await bill.save();
-  console.log(bill);
+  // console.log(bill);
   // Generate Bill table
+  const billHtml = html(bill, granite, tile);
   // Convert table to image
   // Store image
   // Send response
+  res.json({
+    success: true,
+    mesage: 'Bill created',
+    bill,
+    granite,
+    tile,
+    billHtml,
+  });
 };
 
 export { listAllBills, newBillGenerator };

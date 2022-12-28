@@ -11,12 +11,30 @@ const tilesWorkSchema = new Schema(
       type: Number,
       default: 18,
     },
-    wallTilesPrevQuan: Number,
-    wallTilesCurrQuan: Number,
-    wallTilesCumQuan: Number,
-    wallTilesPrevPrice: Number,
-    wallTilesCurrPrice: Number,
-    wallTilesCumPrice: Number,
+    wallTilesPrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    wallTilesCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    wallTilesCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    wallTilesPrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    wallTilesCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    wallTilesCumPrice: {
+      type: Number,
+      default: 0,
+    },
 
     floorTilesUnit: {
       type: String,
@@ -26,12 +44,30 @@ const tilesWorkSchema = new Schema(
       type: Number,
       default: 16,
     },
-    floorTilesPrevQuan: Number,
-    floorTilesCurrQuan: Number,
-    floorTilesCumQuan: Number,
-    floorTilesPrevPrice: Number,
-    floorTilesCurrPrice: Number,
-    floorTilesCumPrice: Number,
+    floorTilesPrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    floorTilesCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    floorTilesCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    floorTilesPrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    floorTilesCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    floorTilesCumPrice: {
+      type: Number,
+      default: 0,
+    },
 
     tableTopNoOneUnit: {
       type: String,
@@ -39,14 +75,32 @@ const tilesWorkSchema = new Schema(
     },
     tableTopNoOneRate: {
       type: Number,
-      default: 2000.0,
+      default: 2000,
     },
-    tableTopNoOnePrevQuan: Number,
-    tableTopNoOneCurrQuan: Number,
-    tableTopNoOneCumQuan: Number,
-    tableTopNoOnePrevPrice: Number,
-    tableTopNoOneCurrPrice: Number,
-    tableTopNoOneCumPrice: Number,
+    tableTopNoOnePrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoOneCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoOneCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoOnePrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoOneCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoOneCumPrice: {
+      type: Number,
+      default: 0,
+    },
 
     tableTopNoTwoUnit: {
       type: String,
@@ -56,12 +110,30 @@ const tilesWorkSchema = new Schema(
       type: Number,
       default: 1100.0,
     },
-    tableTopNoTwoPrevQuan: Number,
-    tableTopNoTwoCurrQuan: Number,
-    tableTopNoTwoCumQuan: Number,
-    tableTopNoTwoPrevPrice: Number,
-    tableTopNoTwoCurrPrice: Number,
-    tableTopNoTwoCumPrice: Number,
+    tableTopNoTwoPrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoTwoCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoTwoCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoTwoPrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoTwoCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoTwoCumPrice: {
+      type: Number,
+      default: 0,
+    },
 
     tableTopNoThreeUnit: {
       type: String,
@@ -71,12 +143,30 @@ const tilesWorkSchema = new Schema(
       type: Number,
       default: 1100.0,
     },
-    tableTopNoThreePrevQuan: Number,
-    tableTopNoThreeCurrQuan: Number,
-    tableTopNoThreeCumQuan: Number,
-    tableTopNoThreePrevPrice: Number,
-    tableTopNoThreeCurrPrice: Number,
-    tableTopNoThreeCumPrice: Number,
+    tableTopNoThreePrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoThreeCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoThreeCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoThreePrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoThreeCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoThreeCumPrice: {
+      type: Number,
+      default: 0,
+    },
 
     tableTopNoFourUnit: {
       type: String,
@@ -86,12 +176,30 @@ const tilesWorkSchema = new Schema(
       type: Number,
       default: 2000.0,
     },
-    tableTopNoFourPrevQuan: Number,
-    tableTopNoFourCurrQuan: Number,
-    tableTopNoFourCumQuan: Number,
-    tableTopNoFourPrevPrice: Number,
-    tableTopNoFourCurrPrice: Number,
-    tableTopNoFourCumPrice: Number,
+    tableTopNoFourPrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoFourCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoFourCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoFourPrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoFourCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    tableTopNoFourCumPrice: {
+      type: Number,
+      default: 0,
+    },
 
     verticalTableTopNoOneUnit: {
       type: String,
@@ -99,14 +207,32 @@ const tilesWorkSchema = new Schema(
     },
     verticalTableTopNoOneRate: {
       type: Number,
-      default: 1400.00,
+      default: 1400.0,
     },
-    verticalTableTopNoOnePrevQuan: Number,
-    verticalTableTopNoOneCurrQuan: Number,
-    verticalTableTopNoOneCumQuan: Number,
-    verticalTableTopNoOnePrevPrice: Number,
-    verticalTableTopNoOneCurrPrice: Number,
-    verticalTableTopNoOneCumPrice: Number,
+    verticalTableTopNoOnePrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoOneCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoOneCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoOnePrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoOneCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoOneCumPrice: {
+      type: Number,
+      default: 0,
+    },
 
     verticalTableTopNoTwoUnit: {
       type: String,
@@ -114,14 +240,32 @@ const tilesWorkSchema = new Schema(
     },
     verticalTableTopNoTwoRate: {
       type: Number,
-      default: 2000.00,
+      default: 2000.0,
     },
-    verticalTableTopNoTwoPrevQuan: Number,
-    verticalTableTopNoTwoCurrQuan: Number,
-    verticalTableTopNoTwoCumQuan: Number,
-    verticalTableTopNoTwoPrevPrice: Number,
-    verticalTableTopNoTwoCurrPrice: Number,
-    verticalTableTopNoTwoCumPrice: Number,
+    verticalTableTopNoTwoPrevQuan: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoTwoCurrQuan: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoTwoCumQuan: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoTwoPrevPrice: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoTwoCurrPrice: {
+      type: Number,
+      default: 0,
+    },
+    verticalTableTopNoTwoCumPrice: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );

@@ -42,6 +42,8 @@ const NewBill = () => {
     verticalTableTopNumberTwoUnit: 'no-3',
     verticalTableTopNumberTwoPrevQuan: null,
     verticalTableTopNumberTwoCurrQuan: null,
+
+    totalAdvance: null,
   });
 
   const inputChangeHandler = (e) => {
@@ -98,8 +100,10 @@ const NewBill = () => {
       verticalTableTopNumberTwoUnit: 'no-3',
       verticalTableTopNumberTwoPrevQuan: null,
       verticalTableTopNumberTwoCurrQuan: null,
+
+      totalAdvance: null,
     });
-  }
+  };
 
   return (
     <>
@@ -491,6 +495,19 @@ const NewBill = () => {
                 />
               </label>
             </div>
+          </div>
+
+          <div className="my-3 p-5">
+            <label htmlFor="totalAdv">
+              Total Advance:{' '}
+              <input
+                className="border-2 border-black rounded-lg mx-3 py-1 px-2"
+                type="number"
+                name="totalAdvance"
+                value={billData.totalAdvance || ''}
+                onChange={inputChangeHandler}
+              />
+            </label>
           </div>
           <button className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out m-5">
             Submit

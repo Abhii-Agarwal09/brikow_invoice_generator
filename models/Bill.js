@@ -8,15 +8,36 @@ const billSchema = new Schema(
       ref: 'granitework',
     },
     tilesWork: { type: Schema.Types.ObjectId, ref: 'tileswork' },
-    totalPrevAmount: Number,
-    totalCurrAmount: Number,
-    totalCumAmount: Number,
+    totalPrevAmount: {
+      type: Number,
+      default: 0,
+    },
+    totalCurrAmount: {
+      type: Number,
+      default: 0,
+    },
+    totalCumAmount: {
+      type: Number,
+      default: 0,
+    },
     totalPrevAdvance: { type: Number, default: 0 },
     totalCurrAdvance: { type: Number, default: 0 },
-    totalCumAdvance: Number,
-    totalPrevBalance: Number,
-    totalCurrBalance: Number,
-    totalCumBalance: Number,
+    totalCumAdvance: {
+      type: Number,
+      default: 0,
+    },
+    totalPrevBalance: {
+      type: Number,
+      default: 0,
+    },
+    totalCurrBalance: {
+      type: Number,
+      default: 0,
+    },
+    totalCumBalance: {
+      type: Number,
+      default: 0,
+    },
     billImage: String,
   },
   { timestamps: true }

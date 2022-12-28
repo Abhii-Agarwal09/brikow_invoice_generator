@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const Bills = () => {
+  // eslint-disable-next-line no-unused-vars
   const [allBills, setAllBills] = useState([]);
 
   return (

@@ -93,13 +93,28 @@ const tilesWorkSchema = new Schema(
     tableTopNoFourCurrPrice: Number,
     tableTopNoFourCumPrice: Number,
 
-    verticalTableTopNoTwoUnit: {
+    verticalTableTopNoOneUnit: {
       type: String,
       default: 'no-2',
     },
-    verticalTableTopNoTwoRate: {
+    verticalTableTopNoOneRate: {
       type: Number,
       default: 1400.00,
+    },
+    verticalTableTopNoOnePrevQuan: Number,
+    verticalTableTopNoOneCurrQuan: Number,
+    verticalTableTopNoOneCumQuan: Number,
+    verticalTableTopNoOnePrevPrice: Number,
+    verticalTableTopNoOneCurrPrice: Number,
+    verticalTableTopNoOneCumPrice: Number,
+
+    verticalTableTopNoTwoUnit: {
+      type: String,
+      default: 'no-3',
+    },
+    verticalTableTopNoTwoRate: {
+      type: Number,
+      default: 2000.00,
     },
     verticalTableTopNoTwoPrevQuan: Number,
     verticalTableTopNoTwoCurrQuan: Number,
@@ -107,21 +122,6 @@ const tilesWorkSchema = new Schema(
     verticalTableTopNoTwoPrevPrice: Number,
     verticalTableTopNoTwoCurrPrice: Number,
     verticalTableTopNoTwoCumPrice: Number,
-
-    verticalTableTopNoThreeUnit: {
-      type: String,
-      default: 'no-3',
-    },
-    verticalTableTopNoThreeRate: {
-      type: Number,
-      default: 2000.00,
-    },
-    verticalTableTopNoThreePrevQuan: Number,
-    verticalTableTopNoThreeCurrQuan: Number,
-    verticalTableTopNoThreeCumQuan: Number,
-    verticalTableTopNoThreePrevPrice: Number,
-    verticalTableTopNoThreeCurrPrice: Number,
-    verticalTableTopNoThreeCumPrice: Number,
   },
   { timestamps: true }
 );

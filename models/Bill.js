@@ -11,12 +11,13 @@ const billSchema = new Schema(
     totalPrevAmount: Number,
     totalCurrAmount: Number,
     totalCumAmount: Number,
-    totalPrevAdvance: Number,
-    totalCurrAdvance: Number,
+    totalPrevAdvance: { type: Number, default: 0 },
+    totalCurrAdvance: { type: Number, default: 0 },
     totalCumAdvance: Number,
     totalPrevBalance: Number,
     totalCurrBalance: Number,
     totalCumBalance: Number,
+    billImage: String,
   },
   { timestamps: true }
 );

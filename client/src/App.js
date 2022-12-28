@@ -2,7 +2,6 @@
 import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Bills from './pages/Bills';
-import Home from './pages/Home';
 import NewBill from './pages/NewBill';
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/bills" element={<Bills />} />
         <Route path="/bills/new" element={<NewBill />} />
       </Routes>

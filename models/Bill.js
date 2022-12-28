@@ -38,7 +38,7 @@ const billSchema = new Schema(
       type: Number,
       default: 0,
     },
-    billImage: String,
+    billImage: Buffer,
   },
   { timestamps: true }
 );

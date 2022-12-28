@@ -1,6 +1,9 @@
 import Bill from '../models/Bill.js';
 import GraniteWork from '../models/GraniteWork.js';
 import TilesWork from '../models/TilesWork.js';
+import html from '../utilities/htmlGenerator.js';
+import nodeHtmlToImage from 'node-html-to-image';
+import fs from 'fs';
 
 const listAllBills = async (req, res) => {
   const bills = await Bill.find();
@@ -285,6 +288,13 @@ const newBillGenerator = async (req, res) => {
   // Generate Bill table
   const billHtml = html(bill, granite, tile);
   // Convert table to image
+  const imageBuffer = await nodeHtmlToImage({
+    output: `./bills/${bill._id}.png`,
+    html: billHtml,
+  })
+  console.log(imageBuffer);
+  bill.billImage = fs.readFileSync(`./bills/${bill._id}.png`);
+  await bill.save();
   // Store image
   // Send response
   res.json({

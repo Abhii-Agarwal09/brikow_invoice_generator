@@ -1,5 +1,286 @@
-const html = (obj) => {
-  return 
+const html = (bill, granite, tile) => {
+  return `
+<table style="text-align:center;">
+	<caption>Table 1</caption>
+	<thead>
+	<tr>
+		<th>S. NO.</th>
+		<th>DESCRIPTION</th>
+		<th>UNIT</th>
+		<th>RATE</th>
+		<th>PREVIOUS QUANTITY</th>
+		<th>THIS QUANTITY</th>
+		<th>CUMULATIVE QUANTITY</th>
+		<th>PREVIOUS AMOUNT</th>
+		<th>THIS AMOUNT&nbsp;</th>
+		<th>CUMULATIVE AMOUNT</th>
+		<th>REMARKS</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>&nbsp;A</td>
+		<td>GRANITE WORK</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;1</td>
+		<td>GRANITE FLOORING</td>
+		<td>SFT</td>
+		<td>35&nbsp;</td>
+		<td>${granite.graniteFlooringPrevQuan}</td>
+		<td>${granite.graniteFlooringCurrQuan}</td>
+		<td>${granite.graniteFlooringCumQuan}</td>
+		<td>${granite.graniteFlooringPrevPrice}</td>
+		<td>${granite.graniteFlooringCurrPrice}</td>
+		<td>${granite.graniteFlooringCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;2</td>
+		<td>GRANITE PATTI</td>
+		<td>RFT</td>
+		<td>35</td>
+		<td>${granite.granitePattiPrevQuan}</td>
+		<td>${granite.granitePattiCurrQuan}</td>
+		<td>${granite.granitePattiCumQuan}</td>
+		<td>${granite.granitePattiPrevPrice}</td>
+		<td>${granite.granitePattiCurrPrice}</td>
+		<td>${granite.granitePattiCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;3</td>
+		<td>GRANITE HALF MOULDING</td>
+		<td>RFT</td>
+		<td>35</td>
+		<td>${granite.graniteHalfMouldingPrevQuan}</td>
+		<td>${granite.graniteHalfMouldingCurrQuan}</td>
+		<td>${granite.graniteHalfMouldingCumQuan}</td>
+		<td>${granite.graniteHalfMouldingPrevPrice}</td>
+		<td>${granite.graniteHalfMouldingCurrPrice}</td>
+		<td>${granite.graniteHalfMouldingCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;B</td>
+		<td>TILES WORK</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;1</td>
+		<td>WALL TILES&nbsp;</td>
+		<td>SFT</td>
+		<td>18</td>
+		<td>${tile.wallTilesPrevQuan}</td>
+		<td>${tile.wallTilesCurrQuan}</td>
+		<td>${tile.wallTilesCumQuan}</td>
+		<td>${tile.wallTilesPrevPrice}</td>
+		<td>${tile.wallTilesCurrPrice}</td>
+		<td>${tile.wallTilesCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;2</td>
+		<td>FLOOR TILES</td>
+		<td>SFT</td>
+		<td>16</td>
+		<td>${tile.floorTilesPrevQuan}</td>
+		<td>${tile.floorTilesCurrQuan}</td>
+		<td>${tile.floorTilesCumQuan}</td>
+		<td>${tile.floorTilesPrevPrice}</td>
+		<td>${tile.floorTilesCurrPrice}</td>
+		<td>${tile.floorTilesCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>Table top</td>
+		<td>no-1</td>
+		<td>2000</td>
+		<td>${tile.tableTopNoOnePrevQuan}</td>
+		<td>${tile.tableTopNoOneCurrQuan}</td>
+		<td>${tile.tableTopNoOneCumQuan}</td>
+		<td>${tile.tableTopNoOnePrevPrice}</td>
+		<td>${tile.tableTopNoOneCurrPrice}</td>
+		<td>${tile.tableTopNoOneCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>no-2</td>
+		<td>1100</td>
+		<td>${tile.tableTopNoTwoPrevQuan}</td>
+		<td>${tile.tableTopNoTwoCurrQuan}</td>
+		<td>${tile.tableTopNoTwoCumQuan}</td>
+		<td>${tile.tableTopNoTwoPrevPrice}</td>
+		<td>${tile.tableTopNoTwoCurrPrice}</td>
+		<td>${tile.tableTopNoTwoCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>no-3</td>
+		<td>1100</td>
+		<td>${tile.tableTopNoThreePrevQuan}</td>
+		<td>${tile.tableTopNoThreeCurrQuan}</td>
+		<td>${tile.tableTopNoThreeCumQuan}</td>
+		<td>${tile.tableTopNoThreePrevPrice}</td>
+		<td>${tile.tableTopNoThreeCurrPrice}</td>
+		<td>${tile.tableTopNoThreeCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>no-4&nbsp;</td>
+		<td>2000</td>
+		<td>${tile.tableTopNoFourPrevQuan}</td>
+		<td>${tile.tableTopNoFourCurrQuan}</td>
+		<td>${tile.tableTopNoFourCumQuan}</td>
+		<td>${tile.tableTopNoFourPrevPrice}</td>
+		<td>${tile.tableTopNoFourCurrPrice}</td>
+		<td>${tile.tableTopNoFourCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>Vertical Table Top</td>
+		<td>no-2</td>
+		<td>1400</td>
+		<td>${tile.verticalTableTopNoOnePrevQuan}</td>
+		<td>${tile.verticalTableTopNoOneCurrQuan}</td>
+		<td>${tile.verticalTableTopNoOneCumQuan}</td>
+		<td>${tile.verticalTableTopNoOnePrevPrice}</td>
+		<td>${tile.verticalTableTopNoOneCurrPrice}</td>
+		<td>${tile.verticalTableTopNoOneCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>no-3</td>
+		<td>1200</td>
+		<td>${tile.verticalTableTopNoTwoPrevQuan}</td>
+		<td>${tile.verticalTableTopNoTwoCurrQuan}</td>
+		<td>${tile.verticalTableTopNoTwoCumQuan}</td>
+		<td>${tile.verticalTableTopNoTwoPrevPrice}</td>
+		<td>${tile.verticalTableTopNoTwoCurrPrice}</td>
+		<td>${tile.verticalTableTopNoTwoCumPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>TOTAL AMOUNT&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>${bill.totalPrevAmount}</td>
+		<td>${bill.totalCurrAmount}</td>
+		<td>${bill.totalCumAmount}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;HOLD FOR DLP @5%</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;LESS ADVANCE</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>${bill.totalCumAdvance}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;BALANCE TO BE PAID IN BG LINK</td>
+		<td>&nbsp;</td>
+		<td>${bill.totalPrevBalance}</td>
+		<td>${bill.totalCurrBalance}</td>
+		<td>${bill.totalCumBalance}</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tbody>
+</table>
+  `;
 }
 
 export default html;

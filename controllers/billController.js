@@ -6,7 +6,7 @@ import nodeHtmlToImage from 'node-html-to-image';
 import fs from 'fs';
 
 const listAllBills = async (req, res) => {
-  const bills = await Bill.find();
+  const bills = await Bill.find().populate('graniteWork').populate('tilesWork');
   res.json({
     success: true,
     message: 'All bills',
@@ -14,7 +14,7 @@ const listAllBills = async (req, res) => {
   });
 };
 const newBillGenerator = async (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
   const {
     graniteFlooringUnit,
     graniteFlooringPrevQuan,
@@ -60,7 +60,7 @@ const newBillGenerator = async (req, res) => {
     totalAdvance,
   } = req.body;
 
-  console.log(typeof totalAdvance);
+  // console.log(typeof totalAdvance);
 
   // Granite work
   const granite = new GraniteWork({
@@ -292,7 +292,7 @@ const newBillGenerator = async (req, res) => {
     output: `./bills/${bill._id}.png`,
     html: billHtml,
   })
-  console.log(imageBuffer);
+  // console.log(imageBuffer);
   bill.billImage = fs.readFileSync(`./bills/${bill._id}.png`);
   await bill.save();
   // Store image

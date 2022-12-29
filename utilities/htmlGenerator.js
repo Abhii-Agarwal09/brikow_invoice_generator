@@ -1,7 +1,6 @@
 const html = (bill, granite, tile) => {
   return `
 <table style="text-align:center;">
-	<caption>Table 1</caption>
 	<thead>
 	<tr>
 		<th>S. NO.</th>

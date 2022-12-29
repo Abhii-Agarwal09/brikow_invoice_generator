@@ -22,29 +22,29 @@ const NewBill = () => {
     floorTilesPrevQuan: null,
     floorTilesCurrQuan: null,
 
-    tableTopNumberOneUnit: 'no-1',
-    tableTopNumberOnePrevQuan: null,
-    tableTopNumberOneCurrQuan: null,
+    tableTopNoOneUnit: 'no-1',
+    tableTopNoOnePrevQuan: null,
+    tableTopNoOneCurrQuan: null,
 
-    tableTopNumberTwoUnit: 'no-2',
-    tableTopNumberTwoPrevQuan: null,
-    tableTopNumberTwoCurrQuan: null,
+    tableTopNoTwoUnit: 'no-2',
+    tableTopNoTwoPrevQuan: null,
+    tableTopNoTwoCurrQuan: null,
 
-    tableTopNumberThreeUnit: 'no-3',
-    tableTopNumberThreePrevQuan: null,
-    tableTopNumberThreeCurrQuan: null,
+    tableTopNoThreeUnit: 'no-3',
+    tableTopNoThreePrevQuan: null,
+    tableTopNoThreeCurrQuan: null,
 
-    tableTopNumberFourUnit: 'no-4',
-    tableTopNumberFourPrevQuan: null,
-    tableTopNumberFourCurrQuan: null,
+    tableTopNoFourUnit: 'no-4',
+    tableTopNoFourPrevQuan: null,
+    tableTopNoFourCurrQuan: null,
 
-    verticalTableTopNumberOneUnit: 'no-2',
-    verticalTableTopNumberOnePrevQuan: null,
-    verticalTableTopNumberOneCurrQuan: null,
+    verticalTableTopNoOneUnit: 'no-2',
+    verticalTableTopNoOnePrevQuan: null,
+    verticalTableTopNoOneCurrQuan: null,
 
-    verticalTableTopNumberTwoUnit: 'no-3',
-    verticalTableTopNumberTwoPrevQuan: null,
-    verticalTableTopNumberTwoCurrQuan: null,
+    verticalTableTopNoTwoUnit: 'no-3',
+    verticalTableTopNoTwoPrevQuan: null,
+    verticalTableTopNoTwoCurrQuan: null,
 
     totalAdvance: null,
   });
@@ -91,29 +91,29 @@ const NewBill = () => {
       floorTilesPrevQuan: null,
       floorTilesCurrQuan: null,
 
-      tableTopNumberOneUnit: 'no-1',
-      tableTopNumberOnePrevQuan: null,
-      tableTopNumberOneCurrQuan: null,
+      tableTopNoOneUnit: 'no-1',
+      tableTopNoOnePrevQuan: null,
+      tableTopNoOneCurrQuan: null,
 
-      tableTopNumberTwoUnit: 'no-2',
-      tableTopNumberTwoPrevQuan: null,
-      tableTopNumberTwoCurrQuan: null,
+      tableTopNoTwoUnit: 'no-2',
+      tableTopNoTwoPrevQuan: null,
+      tableTopNoTwoCurrQuan: null,
 
-      tableTopNumberThreeUnit: 'no-3',
-      tableTopNumberThreePrevQuan: null,
-      tableTopNumberThreeCurrQuan: null,
+      tableTopNoThreeUnit: 'no-3',
+      tableTopNoThreePrevQuan: null,
+      tableTopNoThreeCurrQuan: null,
 
-      tableTopNumberFourUnit: 'no-4',
-      tableTopNumberFourPrevQuan: null,
-      tableTopNumberFourCurrQuan: null,
+      tableTopNoFourUnit: 'no-4',
+      tableTopNoFourPrevQuan: null,
+      tableTopNoFourCurrQuan: null,
 
-      verticalTableTopNumberOneUnit: 'no-2',
-      verticalTableTopNumberOnePrevQuan: null,
-      verticalTableTopNumberOneCurrQuan: null,
+      verticalTableTopNoOneUnit: 'no-2',
+      verticalTableTopNoOnePrevQuan: null,
+      verticalTableTopNoOneCurrQuan: null,
 
-      verticalTableTopNumberTwoUnit: 'no-3',
-      verticalTableTopNumberTwoPrevQuan: null,
-      verticalTableTopNumberTwoCurrQuan: null,
+      verticalTableTopNoTwoUnit: 'no-3',
+      verticalTableTopNoTwoPrevQuan: null,
+      verticalTableTopNoTwoCurrQuan: null,
 
       totalAdvance: null,
     });
@@ -309,9 +309,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="text"
-                  value={billData.tableTopNumberOneUnit || ''}
+                  value={billData.tableTopNoOneUnit || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberOneUnit"
+                  name="tableTopNoOneUnit"
                 />
               </label>
               <label htmlFor="ttnopq">
@@ -319,9 +319,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberOnePrevQuan || ''}
+                  value={billData.tableTopNoOnePrevQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberOnePrevQuan"
+                  name="tableTopNoOnePrevQuan"
                 />
               </label>
               <label htmlFor="ttnocq">
@@ -329,9 +329,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberOneCurrQuan || ''}
+                  value={billData.tableTopNoOneCurrQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberOneCurrQuan"
+                  name="tableTopNoOneCurrQuan"
                 />
               </label>
             </div>
@@ -343,9 +343,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="text"
-                  value={billData.tableTopNumberTwoUnit || ''}
+                  value={billData.tableTopNoTwoUnit || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberTwoUnit"
+                  name="tableTopNoTwoUnit"
                 />
               </label>
               <label htmlFor="ttntpq">
@@ -353,9 +353,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberTwoPrevQuan || ''}
+                  value={billData.tableTopNoTwoPrevQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberTwoPrevQuan"
+                  name="tableTopNoTwoPrevQuan"
                 />
               </label>
               <label htmlFor="ttntcq">
@@ -363,9 +363,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberTwoCurrQuan || ''}
+                  value={billData.tableTopNoTwoCurrQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberTwoCurrQuan"
+                  name="tableTopNoTwoCurrQuan"
                 />
               </label>
             </div>
@@ -377,9 +377,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="text"
-                  value={billData.tableTopNumberThreeUnit || ''}
+                  value={billData.tableTopNoThreeUnit || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberThreeUnit"
+                  name="tableTopNoThreeUnit"
                 />
               </label>
               <label htmlFor="ttnthpq">
@@ -387,9 +387,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberThreePrevQuan || ''}
+                  value={billData.tableTopNoThreePrevQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberThreePrevQuan"
+                  name="tableTopNoThreePrevQuan"
                 />
               </label>
               <label htmlFor="ttnthcq">
@@ -397,9 +397,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberThreeCurrQuan || ''}
+                  value={billData.tableTopNoThreeCurrQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberThreeCurrQuan"
+                  name="tableTopNoThreeCurrQuan"
                 />
               </label>
             </div>
@@ -411,9 +411,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="text"
-                  value={billData.tableTopNumberFourUnit || ''}
+                  value={billData.tableTopNoFourUnit || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberFourUnit"
+                  name="tableTopNoFourUnit"
                 />
               </label>
               <label htmlFor="ttnfpq">
@@ -421,9 +421,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberFourPrevQuan || ''}
+                  value={billData.tableTopNoFourPrevQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberFourPrevQuan"
+                  name="tableTopNoFourPrevQuan"
                 />
               </label>
               <label htmlFor="ttnfcq">
@@ -431,9 +431,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.tableTopNumberFourCurrQuan || ''}
+                  value={billData.tableTopNoFourCurrQuan || ''}
                   onChange={inputChangeHandler}
-                  name="tableTopNumberFourCurrQuan"
+                  name="tableTopNoFourCurrQuan"
                 />
               </label>
             </div>
@@ -447,9 +447,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="text"
-                  value={billData.verticalTableTopNumberOneUnit || ''}
+                  value={billData.verticalTableTopNoOneUnit || ''}
                   onChange={inputChangeHandler}
-                  name="verticalTableTopNumberOneUnit"
+                  name="verticalTableTopNoOneUnit"
                 />
               </label>
               <label htmlFor="vttnopq">
@@ -457,9 +457,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.verticalTableTopNumberOnePrevQuan || ''}
+                  value={billData.verticalTableTopNoOnePrevQuan || ''}
                   onChange={inputChangeHandler}
-                  name="verticalTableTopNumberOnePrevQuan"
+                  name="verticalTableTopNoOnePrevQuan"
                 />
               </label>
               <label htmlFor="vttnocq">
@@ -467,9 +467,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.verticalTableTopNumberOneCurrQuan || ''}
+                  value={billData.verticalTableTopNoOneCurrQuan || ''}
                   onChange={inputChangeHandler}
-                  name="verticalTableTopNumberOneCurrQuan"
+                  name="verticalTableTopNoOneCurrQuan"
                 />
               </label>
             </div>
@@ -483,9 +483,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="text"
-                  value={billData.verticalTableTopNumberTwoUnit || ''}
+                  value={billData.verticalTableTopNoTwoUnit || ''}
                   onChange={inputChangeHandler}
-                  name="verticalTableTopNumberTwoUnit"
+                  name="verticalTableTopNoTwoUnit"
                 />
               </label>
               <label htmlFor="vttntpq">
@@ -493,9 +493,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.verticalTableTopNumberTwoPrevQuan || ''}
+                  value={billData.verticalTableTopNoTwoPrevQuan || ''}
                   onChange={inputChangeHandler}
-                  name="verticalTableTopNumberTwoPrevQuan"
+                  name="verticalTableTopNoTwoPrevQuan"
                 />
               </label>
               <label htmlFor="vttntcq">
@@ -503,9 +503,9 @@ const NewBill = () => {
                 <input
                   className="border-2 border-black rounded-lg mx-3 py-1 px-2"
                   type="number"
-                  value={billData.verticalTableTopNumberTwoCurrQuan || ''}
+                  value={billData.verticalTableTopNoTwoCurrQuan || ''}
                   onChange={inputChangeHandler}
-                  name="verticalTableTopNumberTwoCurrQuan"
+                  name="verticalTableTopNoTwoCurrQuan"
                 />
               </label>
             </div>

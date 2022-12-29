@@ -18,17 +18,23 @@ const Bills = () => {
   }, []);
   return (
     <>
-      <h1>Bills</h1>
+      <h1 className="text-2xl text-center my-5">All Bills</h1>
       {allBills.map((bill, index) => {
-        console.log(bill, bill.billImage?.data);
+        // console.log(bill, bill.billImage?.data);
         const base64String = btoa(
           String.fromCharCode(...new Uint8Array(bill.billImage?.data))
         ); 
-        console.log(base64String);
+        // console.log(base64String);
         return (
           <>
-            <h1>{index}</h1>
-            <img src={`data:image/png;base64,${base64String}`} alt="imag" />
+            <div className='p-5 my-5'>
+              <h1 className="text-xl">Bill {index}</h1>
+              <img
+                className="w-90 h-auto"
+                src={`data:image/png;base64,${base64String}`}
+                alt="imag"
+              />
+            </div>
           </>
         );
       })}
